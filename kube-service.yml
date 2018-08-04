@@ -11,6 +11,6 @@ spec:
       targetPort: 3737
       nodePort: 30303
       protocol: TCP
-      name: ms-go-hello
+      name: http
   selector:
     app: ms-go-hello
