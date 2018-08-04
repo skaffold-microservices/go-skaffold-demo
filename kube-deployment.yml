@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-go-hello
+  labels:
+    app: ms-go-hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ms-go-hello
+  template:
+    metadata:
+      labels:
+        app: ms-go-hello
+    spec:
+      containers:
+      - name: ms-go-hello
+        image: local/ms-go-hello
+        ports:
+        - containerPort: 3737

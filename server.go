@@ -14,7 +14,8 @@ func main() {
 	if serverPort == "" {
 		serverPort = "3737"
 	}
-	fmt.Printf("Starting server at: http://0.0.0.0:%v\n", serverPort)
+	externalPort := 30303
+	fmt.Printf("Starting server at: http://0.0.0.0:%v\n", externalPort)
 	http.HandleFunc("/", viewHandler)
 	http.ListenAndServe(":"+serverPort, nil)
 

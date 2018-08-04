@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ms-go-hello
+  labels:
+    app: ms-go-hello
+spec:
+  type: NodePort
+  ports:
+    - port: 3737
+      targetPort: 3737
+      nodePort: 30303
+      protocol: TCP
+      name: ms-go-hello
+  selector:
+    app: ms-go-hello
