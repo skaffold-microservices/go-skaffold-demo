@@ -23,15 +23,16 @@ func main() {
 
 func viewHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-type", "text/plain")
-	fmt.Fprintf(w, "Hello, Friend!")
+	fmt.Fprintf(w, "Hello, friend!")
 }
 
 func perpetualLogger() {
 	counter := 0
 	time.Sleep(time.Second * 10)
-	for {
+	for j := 0; j <= 20; j++ { // nothing endless is ever good
 		counter++
 		fmt.Printf("Meaningless log message #%v\n", counter)
 		time.Sleep(time.Second * 5)
 	}
+	fmt.Printf("Last meaningless message. Server should still run, though.\n")
 }
