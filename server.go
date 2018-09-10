@@ -23,7 +23,7 @@ func main() {
 
 func viewHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-type", "text/plain")
-	fmt.Fprintf(w, "Hello, friend!")
+	fmt.Fprintf(w, "Hello from go microservice!")
 }
 
 func perpetualLogger() {
